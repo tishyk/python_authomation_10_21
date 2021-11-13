@@ -15,7 +15,7 @@
     * main errors with positional arguments
 - restriction of argument types
     * / symbol to make left part positional
-    * \* symbol to make right part positional
+    * \* symbol to make right part keyword
 - lambda functions
     * what is lambda
     * invocation of lambda out of build in functions
