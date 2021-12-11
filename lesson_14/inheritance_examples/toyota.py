@@ -1,4 +1,4 @@
-from lesson_14.inheritance_examples.car import Car
+from lesson_14.inheritance_postulat.car import Car
 
 
 class Toyota(Car):
@@ -12,4 +12,4 @@ class Toyota(Car):
 
 
 if __name__ == "__main__":
-    toyota = Toyota()
+    toyota = Toyota("yellow", 4, "XL")
