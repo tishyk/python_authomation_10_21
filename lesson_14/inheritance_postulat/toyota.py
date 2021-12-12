@@ -6,6 +6,9 @@ class Toyota(Car):
         super().__init__(number_of_doors, color)
         self.__model = model
 
+    def __init_subclass__(cls) -> None:
+        return super().__init_subclass__()
+
     def accelerate(self):
         super().accelerate()
         print("Lets go")
@@ -13,4 +16,5 @@ class Toyota(Car):
 
 if __name__ == "__main__":
     toyota = Toyota("yellow", 4, "XL")
-    toyota.accelerate()
+    # toyota.accelerate()
+    print(dir(toyota))

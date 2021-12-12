@@ -4,6 +4,9 @@ class Car:
         self.__number_of_doors = number_of_doors
         self.__color = color
 
+    def __init_subclass__(cls, number_of_doors: int, color: str) -> None:
+        super().__init_subclass__()
+
     def accelerate(self):
         print("Car was accelaterated")
 
