@@ -22,4 +22,4 @@ def john_asiat(asiat) -> Human:
 
 @pytest.fixture
 def john_negro(negroid) -> Human:
-    yield Human("John", 33, negroid)
+    yield Human("John", 23, "male", negroid)
