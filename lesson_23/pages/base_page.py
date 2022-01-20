@@ -1,15 +1,18 @@
-from re import I
+from __future__ import annotations
+
 from selenium.webdriver import Chrome
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 
+from .singleton import Singleton
 
-class BasePage:
-    def __init__(self, driver: Chrome) -> None:
-        self.__driver = driver
-        self.__wait = WebDriverWait(self.__driver, 15)
+
+class BasePage(Singleton):
+    def __init__(self, driver: Chrome = None) -> None:
+        super().__init__(driver)
+        self.__wait = WebDriverWait(self._driver, 15)
         self.__title_locator = "//div[@id='main']//h1"
 
     def _get_title(self, text: str) -> str:
